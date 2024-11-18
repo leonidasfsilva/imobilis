@@ -1,5 +1,5 @@
 # Imobilis - Sistema para Gestão de Imóveis
-###### Projeto esboço para sistema de gerenciamento de imóveis para alguel e venda, destinado à imobiliárias utilizando as stacks:
+###### Projeto esboço para sistema de gerenciamento de imóveis para aluguel e venda, destinado à imobiliárias utilizando as stacks:
 
 * Laravel 5.8
 * Materialize 0.94
