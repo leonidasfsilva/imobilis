@@ -4,8 +4,11 @@
 /public/hot
 /public/storage
 /public/img/imoveis/*
+!/public/img/imoveis/.gitkeep
 /public/img/paginas/*
+!/public/img/paginas/.gitkeep
 /public/img/slides/*
+!/public/img/slides/.gitkeep
 /storage/*.key
 /vendor
 .env
