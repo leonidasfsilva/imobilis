@@ -60,11 +60,11 @@ php artisan serve
 ### [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ### Credenciais de acesso Admin:
-E-MAIL:
+E-mail:
 ```dosini
 admin@mail.com
 ```
-SENHA:
+Senha:
 ```dosini
 123456
 ```
