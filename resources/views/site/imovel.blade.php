@@ -22,7 +22,7 @@
                             </div>
                         </li>
                     @endforeach
-                        
+
                     </ul>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <button onclick="sliderNext()" class="btn blue">Próxima</button>
             </div>
             @else
-            <img class="responsive-img" src="{{ asset($imovel->imagem) }}">
+            <img class="responsive-img" src="{{ isset($registro->galeria->imagem) ? asset($registro->galeria->imagem) : asset('img/no-image.png') }}">
             @endif
         </div>
         <div class="col s12 m4">

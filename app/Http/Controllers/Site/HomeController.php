@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Cidade;
+use App\Models\Galeria;
 use App\Models\Imovel;
 use App\Models\Slide;
 use App\Models\Tipo;
@@ -21,7 +22,12 @@ class HomeController extends Controller
     	$tipos = Tipo::orderBy('titulo')->get();
     	$cidades = Cidade::orderBy('nome')->get();
 
-    	return view('site.home',compact('imoveis','slides','direcaoImagem','paginacao','tipos','cidades'));
+        foreach ($imoveis as $imovel) {
+            $imovel->galeria = Galeria::select('imagem')->where('imovel_id', $imovel->id)->first();
+        }
+
+
+        return view('site.home',compact('imoveis','slides','direcaoImagem','paginacao','tipos','cidades'));
     }
     public function busca(Request $request)
     {

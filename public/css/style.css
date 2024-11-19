@@ -13,7 +13,7 @@ nav.breadcrumb {
 }
 
 nav.breadcrumb {
-    color: whitesmoke;
+    color: slategray;
 }
 
 main {
@@ -32,6 +32,14 @@ blockquote {
 
 .text-center {
     text-align: center;
+}
+
+.lowercase-text {
+    text-transform: lowercase !important;
+}
+
+.text-transform-none {
+    text-transform: none !important;
 }
 
 .close {

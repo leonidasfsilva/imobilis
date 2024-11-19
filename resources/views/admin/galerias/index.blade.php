@@ -36,8 +36,8 @@
                         <td><img width="100" src="{{asset($registro->imagem)}}"></td>
                         <td>{{ $registro->ordem }}</td>
                         <td>
-                            <a class="btn orange" href="{{ route('admin.galerias.editar',$registro->id) }}">Editar</a>
-                            <a class="btn red" href="javascript: if(confirm('Deletar esse registro?')){ window.location.href = '{{ route('admin.galerias.deletar',$registro->id) }}' }">Deletar</a>
+                            <a class="btn orange" href="{{ route('admin.galerias.editar', $imovel->id) }}">Editar</a>
+                            <a class="btn red" href="javascript: if(confirm('Deletar esse registro?')){ window.location.href = '{{ route('admin.galerias.deletar', $registro->id) }}' }">Deletar</a>
                         </td>
                     </tr>
                 @endforeach
@@ -45,7 +45,7 @@
             </table>
         </div>
         <div class="row">
-            <a class="btn blue" href="{{route('admin.galerias.adicionar',$imovel->id)}}">Adicionar</a>
+            <a class="btn blue" href="{{route('admin.galerias.adicionar', $imovel->id)}}">Adicionar</a>
         </div>
     </div>
 @endsection

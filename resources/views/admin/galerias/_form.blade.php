@@ -8,12 +8,10 @@
         <label>Descrição</label>
         <input type="text" name="descricao" class="validade" value="{{ isset($registro->descricao) ? $registro->descricao : '' }}">
     </div>
-
     <div class="input-field">
         <label>Ordem</label>
         <input type="text" name="ordem" class="validade" value="{{ isset($registro->ordem) ? $registro->ordem : '' }}">
     </div>
-
     <div class="row">
         <div class="file-field input-field col m6 s12">
             <div class="btn">
@@ -25,14 +23,10 @@
             </div>
         </div>
         <div class="col m6 s12">
-
             <img width="120" src="{{ asset($registro->imagem) }}">
-
         </div>
     </div>
-
 @else
-
     <div class="row">
         <div class="file-field input-field col m12 s12">
             <div class="btn">
@@ -44,7 +38,6 @@
             </div>
         </div>
     </div>
-
 @endif
 
 

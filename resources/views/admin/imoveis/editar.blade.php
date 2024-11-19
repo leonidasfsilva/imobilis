@@ -19,6 +19,7 @@
 
                 {{csrf_field()}}
                 <input type="hidden" name="_method" value="put">
+                <input type="hidden" name="_action" value="imovel">
                 @include('admin.imoveis._form')
 
                 <button class="btn blue">Atualizar</button>

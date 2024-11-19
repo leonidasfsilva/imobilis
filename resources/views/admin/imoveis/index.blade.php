@@ -36,7 +36,7 @@
                         <td>{{ $registro->status }}</td>
                         <td>{{ $registro->cidade->nome }}</td>
                         <td>R$ {{ number_format($registro->valor,2,",",".") }}</td>
-                        <td><img width="100" src="{{asset($registro->imagem)}}"></td>
+                        <td><img width="100" src="{{ isset($registro->galeria->imagem) ? asset($registro->galeria->imagem) : asset('img/no-image.png')}}"></td>
                         <td>{{ $registro->publicar }}</td>
                         <td>
                             <a class="btn orange" href="{{ route('admin.imoveis.editar',$registro->id) }}">Editar</a>

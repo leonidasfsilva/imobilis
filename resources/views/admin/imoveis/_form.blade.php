@@ -1,5 +1,5 @@
 <div class="input-field">
-    <label>Título</label>
+    <label>Título *</label>
     <input type="text" name="titulo" class="validade" value="{{ isset($registro->titulo) ? $registro->titulo : '' }}">
 </div>
 <div class="input-field">
@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="file-field input-field col m12 s12">
-        <label>Imagem</label>
+        <label>Imagem *</label>
         <div class="btn">
             <span>selecionar imagem</span>
             <input type="file" name="imagem">
@@ -20,14 +20,16 @@
         </div>
     </div>
     <div class="col m12 s12">
-        @if(isset($registro->imagem))
-            <img width="120" src="{{ asset($registro->imagem) }}">
+        @if(isset($registro->galeria->imagem))
+            <img width="120" src="{{ asset($registro->galeria->imagem)}}">
+        @else
+            <img width="120" src="{{ asset('img/no-image.png') }}">
         @endif
     </div>
 </div>
 
 <div class="input-field">
-    <label>Status</label>
+    <label>Status *</label>
     <select name="status">
         <option value=""><< Selecione >></option>
         <option value="aluga" {{(isset($registro->status) && $registro->status == 'aluga'  ? 'selected' : '')}}>Aluga
@@ -38,12 +40,11 @@
 </div>
 
 <div class="input-field">
-    <label>Tipo de Imóvel</label>
+    <label>Tipo de Imóvel *</label>
     <select name="tipo_id">
+        <option value=""><< Selecione >></option>
         @foreach($tipos as $tipo)
-            <option value=""><< Selecione >></option>
-            <option
-                value="{{ $tipo->id }}" {{(isset($registro->tipo_id) && $registro->tipo_id == $tipo->id  ? 'selected' : '')}}>
+            <option value="{{ $tipo->id }}" {{(isset($registro->tipo_id) && $registro->tipo_id == $tipo->id  ? 'selected' : '')}}>
                 {{ $tipo->titulo }}
             </option>
         @endforeach
@@ -57,12 +58,13 @@
 </div>
 
 <div class="input-field">
-    <label>CEP (Ex: 96848-146)</label>
+    <label>CEP </label>
+    <small>(Exemplo: 96848-146)</small>
     <input type="text" name="cep" class="validate" value="{{(isset($registro->cep) ? $registro->cep : '')}}">
 </div>
 
 <div class="input-field">
-    <label>Cidade</label>
+    <label>Cidade *</label>
     <select name="cidade_id">
         <option value=""><< Selecione >></option>
         @foreach($cidades as $cidade)
@@ -75,29 +77,33 @@
 </div>
 
 <div class="input-field">
-    <label>Valor (Ex: 234.90)</label>
+    <label>Valor *</label>
+    <small>(Exemplo: 175900.99 é igual a R$ 175.900,99)</small>
     <input type="text" name="valor" class="validate" value="{{(isset($registro->valor) ? $registro->valor : '')}}">
 </div>
 
 <div class="input-field">
-    <label>Dormitórios (Ex: 3)</label>
+    <label>Dormitórios </label>
+    <small>(Exemplo: 3)</small>
     <input type="text" name="dormitorios" class="validate"
            value="{{(isset($registro->dormitorios) ? $registro->dormitorios : '')}}">
 </div>
 
 <div class="input-field">
-    <label>Detalhes (Ex: Sacada: 1 - Banheiro: 2 - Sala de Jantar - Churrasqueira)</label>
+    <label>Detalhes </label>
+    <small>(Exemplo: Sacada: 1 - Banheiro: 2 - Sala de Jantar - Churrasqueira)</small>
     <input type="text" name="detalhes" class="validate"
            value="{{(isset($registro->detalhes) ? $registro->detalhes : '')}}">
 </div>
 
 <div class="input-field">
-    <label>Mapa (Cole o iframe do Google Maps)</label>
+    <label>Mapa </label>
+    <small>(Cole o iframe do Google Maps)</small>
     <textarea name="mapa" class="materialize-textarea">{{(isset($registro->mapa) ? $registro->mapa : '')}}</textarea>
 </div>
 
 <div class="input-field">
-    <label>Publicar?</label>
+    <label>Publicar? *</label>
     <select name="publicar">
         <option value="nao" {{(isset($registro->publicar) && $registro->publicar == 'nao'  ? 'selected' : '')}}>Não
         </option>

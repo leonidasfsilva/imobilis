@@ -16,7 +16,7 @@
         </div>
         <div class="row">
             <form action="{{ route('admin.imoveis.salvar') }}" method="post" enctype="multipart/form-data">
-
+                <input type="hidden" name="_action" value="imovel">
                 {{csrf_field()}}
                 @include('admin.imoveis._form')
 
