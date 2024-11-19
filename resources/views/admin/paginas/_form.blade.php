@@ -1,22 +1,22 @@
 <div class="input-field">
-    <input type="text" name="titulo" class="validade" value="{{ isset($pagina->titulo) ? $pagina->titulo : '' }}">
     <label>Título</label>
+    <input type="text" name="titulo" class="validade" value="{{ isset($pagina->titulo) ? $pagina->titulo : '' }}">
 </div>
 <div class="input-field">
-    <input type="text" name="descricao" class="validade" value="{{ isset($pagina->descricao) ? $pagina->descricao : '' }}">
     <label>Descrição</label>
+    <input type="text" name="descricao" class="validade" value="{{ isset($pagina->descricao) ? $pagina->descricao : '' }}">
 </div>
 @if(isset($pagina->email))
     <div class="input-field">
-        <input type="text" name="email" class="validade" value="{{ isset($pagina->email) ? $pagina->email : '' }}">
         <label>E-mail</label>
+        <input type="text" name="email" class="validade" value="{{ isset($pagina->email) ? $pagina->email : '' }}">
     </div>
 @endif
 <div class="input-field">
-	<textarea name="texto" class="materialize-textarea">
+    <label>Texto</label>
+    <textarea name="texto" class="materialize-textarea">
 		{{ isset($pagina->texto) ? $pagina->texto : '' }}
 	</textarea>
-    <label>Texto</label>
 </div>
 
 <div class="row">
@@ -37,9 +37,9 @@
 </div>
 
 <div class="input-field">
-	<textarea name="mapa" class="materialize-textarea">
+    <label>Mapa</label>
+    <textarea name="mapa" class="materialize-textarea">
 		{{ isset($pagina->mapa) ? $pagina->mapa : '' }}
 	</textarea>
-    <label>Mapa</label>
 </div>
 

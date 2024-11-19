@@ -1,17 +1,17 @@
 @if(isset($registro->imagem))
 
     <div class="input-field">
-        <input type="text" name="titulo" class="validade" value="{{ isset($registro->titulo) ? $registro->titulo : '' }}">
         <label>Título</label>
+        <input type="text" name="titulo" class="validade" value="{{ isset($registro->titulo) ? $registro->titulo : '' }}">
     </div>
     <div class="input-field">
-        <input type="text" name="descricao" class="validade" value="{{ isset($registro->descricao) ? $registro->descricao : '' }}">
         <label>Descrição</label>
+        <input type="text" name="descricao" class="validade" value="{{ isset($registro->descricao) ? $registro->descricao : '' }}">
     </div>
 
     <div class="input-field">
-        <input type="text" name="ordem" class="validade" value="{{ isset($registro->ordem) ? $registro->ordem : '' }}">
         <label>Ordem</label>
+        <input type="text" name="ordem" class="validade" value="{{ isset($registro->ordem) ? $registro->ordem : '' }}">
     </div>
 
     <div class="row">
@@ -36,7 +36,7 @@
     <div class="row">
         <div class="file-field input-field col m12 s12">
             <div class="btn">
-                <span>Upload de Imagens</span>
+                <span>Selecionar Imagens</span>
                 <input type="file" multiple name="imagens[]">
             </div>
             <div class="file-path-wrapper">
