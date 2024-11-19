@@ -19,17 +19,16 @@ class CreateImoveisTable extends Migration
             $table->integer('cidade_id')->unsigned();
             $table->foreign('cidade_id')->references('id')->on('cidades');
             $table->string('titulo');
-            $table->string('descricao');
-            $table->string('imagem');
+            $table->string('descricao')->nullable();
             $table->enum('status', ['vende', 'aluga']);
-            $table->string('endereco');
-            $table->string('cep');
+            $table->string('endereco')->nullable();
+            $table->string('cep')->nullable();
             $table->decimal('valor', 13, 2);
-            $table->integer('dormitorios');
-            $table->string('detalhes');
-            $table->text('mapa')->nullable();
+            $table->integer('dormitorios')->nullable();
+            $table->string('detalhes')->nullable();
+            $table->longText('mapa')->nullable();
             $table->bigInteger('visualizacoes')->default(0);
-            $table->enum('publicar', ['sim', 'nao'])->default('nao');
+            $table->tinyInteger('publicar')->default(1);
             $table->timestamps();
         });
     }
