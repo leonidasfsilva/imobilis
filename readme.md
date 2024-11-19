@@ -16,12 +16,12 @@ git clone https://github.com/leonidasfsilva/imobilis.git imobilis
 
 Acesse a pasta do projeto
 ```sh
-cd checkpoint
+cd imobilis
 ```
 
-Crie o arquivo *.env* copiando a partir do modelo *env*
+Crie o arquivo *.env* copiando a partir do modelo *.env.example*
 ```sh
-cp env .env
+cp .env.example .env
 ```
 Gere uma nova chave para o projeto
 ```sh
@@ -59,3 +59,9 @@ php artisan serve
 
 ### [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
+### Credenciais de acesso Admin:
+```dosini
+E-MAIL: admin@mail.com
+SENHA: 123456
+
+```
