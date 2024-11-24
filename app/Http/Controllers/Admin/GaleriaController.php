@@ -74,8 +74,7 @@ class GaleriaController extends Controller
         return true;
     }
 
-    public
-    function editar($id)
+    public function editar($id)
     {
         $registro = Galeria::find(9);
         $imovel   = Imovel::find($id);
@@ -86,8 +85,7 @@ class GaleriaController extends Controller
 
     }
 
-    public
-    function atualizar(Request $request, $idImovel)
+    public function atualizar(Request $request, $idImovel)
     {
         $dadosForm = $request->all();
 
@@ -131,8 +129,7 @@ class GaleriaController extends Controller
         return true;
     }
 
-    public
-    function deletar($id)
+    public function deletar($id)
     {
 
         $galeria = Galeria::find($id);
@@ -147,6 +144,5 @@ class GaleriaController extends Controller
         \Session::flash('mensagem', ['msg' => 'Registro deletado com sucesso!', 'class' => 'green white-text']);
 
         return redirect()->route('admin.galerias', $imovel->id);
-
     }
 }
